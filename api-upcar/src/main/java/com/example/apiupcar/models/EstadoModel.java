@@ -19,9 +19,6 @@ public class EstadoModel implements Serializable{
 
     private String descricao_estado;
     private String sigla;
-
-    
-    
     
 
     public EstadoModel() {

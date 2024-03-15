@@ -25,7 +25,16 @@ public class EstadoService {
     public List<EstadoModel> listar(){
         return estadoRepository.findAll();
     }
-    
+    public EstadoModel buscarPorId(Long id){
+        EstadoModel estadoModel = estadoRepository.findById(id).get();
+        return estadoModel;
+    }
+    public EstadoModel atualizar(Long id, EstadoDto estadoDto){
+        EstadoModel estadoModel = buscarPorId(id);
+        BeanUtils.copyProperties(estadoDto, estadoModel);
+        return estadoRepository.save(estadoModel);
+    }
+
 
     
 }
