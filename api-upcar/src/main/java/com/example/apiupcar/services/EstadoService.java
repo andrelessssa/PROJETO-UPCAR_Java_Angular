@@ -34,6 +34,9 @@ public class EstadoService {
         BeanUtils.copyProperties(estadoDto, estadoModel);
         return estadoRepository.save(estadoModel);
     }
+    public void deletar(Long id){
+        estadoRepository.deleteById(id);
+    }
 
 
     
