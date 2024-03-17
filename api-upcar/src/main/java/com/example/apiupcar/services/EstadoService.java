@@ -3,7 +3,6 @@ package com.example.apiupcar.services;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.apiupcar.dtos.EstadoDto;
 import com.example.apiupcar.models.EstadoModel;
