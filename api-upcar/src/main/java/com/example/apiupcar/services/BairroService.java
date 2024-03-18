@@ -32,6 +32,12 @@ public class BairroService {
         return bairroRepository.findAll(); 
         
     }
+    public BairroModel burcarPorId(Long id){
+        BairroModel bairroModel = bairroRepository.findById(id).get();
+        return bairroModel;
+    }
+
+
     
 
 }

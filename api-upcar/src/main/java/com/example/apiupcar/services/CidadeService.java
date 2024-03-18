@@ -34,8 +34,7 @@ public class CidadeService {
         return cidadeRepository.save(cidadeModel);
     }
     public List<CidadeModel> listar(){
-        List<CidadeModel> lista = cidadeRepository.findAll();
-        return lista;   
+        return cidadeRepository.findAll();   
     }
     public CidadeModel pedarPorId(Long id){
         CidadeModel cidadeModel = cidadeRepository.findById(id).get();
