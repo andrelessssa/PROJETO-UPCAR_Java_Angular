@@ -29,12 +29,21 @@ public class BairroService {
         return bairroRepository.save(bairroModel);
     }
     public List<BairroModel> listar(){
-        return bairroRepository.findAll(); 
-        
+        return bairroRepository.findAll();    
     }
     public BairroModel burcarPorId(Long id){
         BairroModel bairroModel = bairroRepository.findById(id).get();
         return bairroModel;
+    }
+    public BairroModel atualizar(Long id, BairroDto bairroDto){
+        BairroModel bairroModel = burcarPorId(id);
+        BeanUtils.copyProperties(bairroDto, bairroModel, "id_bairro");
+        CidadeModel cidadeModel = cidadeRepository.findById(bairroModel.getCidadeModel().getId_cidade()).get();
+        bairroModel.setCidadeModel(cidadeModel);
+        return  bairroRepository.save(bairroModel);
+    }
+    public void deletar(Long id){
+        bairroRepository.deleteById(id);
     }
 
 
