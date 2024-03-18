@@ -16,7 +16,7 @@ public class CidadeModel implements Serializable{
     public static final  long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id_cidade;
 
     private String descricaoCidade;
