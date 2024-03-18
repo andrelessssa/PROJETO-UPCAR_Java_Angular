@@ -48,6 +48,9 @@ public class CidadeService {
         cidadeModel.setEstadoModel(estado);
         return cidadeRepository.save(cidadeModel);
     }
+    public void remover(Long id){
+        cidadeRepository.deleteById(id);
+    }
 
     
 }
