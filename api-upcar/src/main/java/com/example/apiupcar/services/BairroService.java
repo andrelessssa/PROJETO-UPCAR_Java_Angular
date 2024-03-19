@@ -21,6 +21,9 @@ public class BairroService {
     @Autowired
     private CidadeRepository cidadeRepository;
 
+
+
+
     public BairroModel criar(BairroDto bairroDto) {
         BairroModel bairroModel = new BairroModel();
         BeanUtils.copyProperties(bairroDto, bairroModel);
