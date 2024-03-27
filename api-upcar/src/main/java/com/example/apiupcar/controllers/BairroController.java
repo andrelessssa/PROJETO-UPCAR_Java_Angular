@@ -39,7 +39,7 @@ public class BairroController {
     }
     @GetMapping("/{id}")
     public ResponseEntity<BairroModel> pegarPorId(@PathVariable(value = "id") Long id){
-        return ResponseEntity.status(HttpStatus.OK).body(bairroService.burcarPorId(id));
+        return ResponseEntity.status(HttpStatus.OK).body(bairroService.buscarPorId(id));
     }
     @PutMapping("/{id}")
     public ResponseEntity<BairroModel> atualizar(@PathVariable(value = "id")Long id, @RequestBody BairroDto bairroDto ){

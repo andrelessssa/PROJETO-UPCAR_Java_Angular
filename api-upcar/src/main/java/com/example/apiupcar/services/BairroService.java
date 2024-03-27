@@ -34,12 +34,12 @@ public class BairroService {
     public List<BairroModel> listar(){
         return bairroRepository.findAll();    
     }
-    public BairroModel burcarPorId(Long id){
+    public BairroModel buscarPorId(Long id){
         BairroModel bairroModel = bairroRepository.findById(id).get();
         return bairroModel;
     }
     public BairroModel atualizar(Long id, BairroDto bairroDto){
-        BairroModel bairroModel = burcarPorId(id);
+        BairroModel bairroModel = buscarPorId(id);
         BeanUtils.copyProperties(bairroDto, bairroModel, "id_bairro");
         CidadeModel cidadeModel = cidadeRepository.findById(bairroModel.getCidadeModel().getId_cidade()).get();
         bairroModel.setCidadeModel(cidadeModel);
